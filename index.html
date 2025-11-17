@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
   <link rel="stylesheet" href="style.css">
-  
+
   <title>Frontend Mentor | Character counter</title>
 </head>
+
 <body>
 
   <header>
@@ -16,6 +18,47 @@
     <img src="assets/images/icon-sun.svg" alt="">
   </header>
 
+  <main>
+    <h1>Analyze your text in real-time.</h1>
+    <form action="">
+      <textarea name="" id="" placeholder="Start typing here… (or paste your text)"></textarea>
+      <div class="checkbox">
+        <div class="space">
+          <input id="space" type="checkbox" value="Exclude-Spaces">
+          <label for="space">Exclude Spaces</label>
+        </div>
+        <div class="character-limit">
+          <input id="limit" type="checkbox" value="Character-Limit">
+          <label for="limit">Set Character Limit</label>
+        </div>
+        <div>
+          <p>Approx. reading time:<span class="minute">0</span> minute</p>
+        </div>
+      </div>
+    </form>
+    <div class="box">
+      <h1>00</h1>
+      <p class="total-characters">Total Characters</p>
+    </div>
+    <div class="box">
+      <h1>00</h1>
+      <p class="word-count">Word Count</p>
+    </div>
+    <div class="box">
+      <h1>00</h1>
+      <p class="sentence-count">Sentence Count</p>
+    </div>
+    <div class="density">
+      <h2>Letter Density</h2>
+      <p class="no-character">No characters found. Start typing to see letter density.</p>
+      <ul class="letter-density">
+      </ul>
+      <ul class="more-density">
+
+      </ul>
+
+    </div>
+  </main>
 
 
 
@@ -23,35 +66,7 @@
 
 
 
-
-
-
-
-
-
-
-
-
-  Analyze your text in real-time.
-
-  Start typing here… (or paste your text)
-
-  Exclude Spaces
-  Set Character Limit
-
-  Approx. reading time: <!-- Insert number --> minutes
-
-  <!-- Insert number -->
-  Total Characters
-
-  <!-- Insert number -->
-  Word Count
-
-  <!-- Insert number -->
-  Sentence Count
-
-  Letter Density
-  No characters found. Start typing to see letter density.
 
 </body>
+
 </html>
