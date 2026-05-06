@@ -7,6 +7,9 @@
 
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
 
   <title>Frontend Mentor | Character counter</title>
 </head>
@@ -14,49 +17,57 @@
 <body>
 
   <header>
-    <img src="assets/images/logo-dark-theme.svg" alt="">
-    <img src="assets/images/icon-sun.svg" alt="">
+    <img class="logo" src="assets/images/logo-dark-theme.svg" alt="">
+    <img class="icon icon-sun" src="assets/images/icon-sun.svg" alt="">
+    <img class="icon icon-moon" src="assets/images/icon-moon.svg" alt="">
   </header>
 
   <main>
-    <h1>Analyze your text in real-time.</h1>
+    <h1 class="title">Analyze your text in real-time.</h1>
+
+    <!-- form  -->
+
     <form action="">
-      <textarea name="" id="" placeholder="Start typing here… (or paste your text)"></textarea>
-      <div class="checkbox">
-        <div class="space">
-          <input id="space" type="checkbox" value="Exclude-Spaces">
-          <label for="space">Exclude Spaces</label>
-        </div>
-        <div class="character-limit">
-          <input id="limit" type="checkbox" value="Character-Limit">
-          <label for="limit">Set Character Limit</label>
-        </div>
-        <div>
-          <p>Approx. reading time:<span class="minute">0</span> minute</p>
+      <textarea name="" id="textarea" placeholder="Start typing here… (or paste your text)"
+        spellcheck="false"></textarea>
+      <div class="options">
+        <div class="checkboxes">
+          <div class="space">
+            <input id="space" type="checkbox" value="Exclude-Spaces">
+            <label for="space">Exclude Spaces</label>
+          </div>
+          <div class="character-limit">
+            <input id="limit" type="checkbox" value="Character-Limit">
+            <label for="limit">Set Character Limit</label>
+            <input type="number" id="limit-value">
+          </div>
         </div>
       </div>
     </form>
-    <div class="box">
-      <h1>00</h1>
-      <p class="total-characters">Total Characters</p>
-    </div>
-    <div class="box">
-      <h1>00</h1>
-      <p class="word-count">Word Count</p>
-    </div>
-    <div class="box">
-      <h1>00</h1>
-      <p class="sentence-count">Sentence Count</p>
+
+    <!-- box  -->
+
+    <div class="boxes">
+      <div class="box total-characters">
+        <h1 class="total-box">0</h1>
+        <p>Total Characters</p>
+      </div>
+      <div class="box word-count">
+        <h1 class="word-box">0</h1>
+        <p>Word Count</p>
+      </div>
+      <div class="box sentence-count">
+        <h1 class="sentence-box">0</h1>
+        <p>Sentence Count</p>
+      </div>
     </div>
     <div class="density">
       <h2>Letter Density</h2>
       <p class="no-character">No characters found. Start typing to see letter density.</p>
-      <ul class="letter-density">
-      </ul>
-      <ul class="more-density">
-
-      </ul>
-
+      <div class="densities">
+      </div>
+      <h3 class="see-more">See More <i class="fa-solid fa-caret-down"></i></h3>
+      <h3 class="see-less">See Less <i class="fa-solid fa-caret-up"></i></h3>
     </div>
   </main>
 
@@ -64,8 +75,7 @@
 
 
 
-
-
+  <script src="app.js"></script>
 
 </body>
 
